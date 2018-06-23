@@ -1,0 +1,46 @@
+<!--
+* @Developer: Divek
+* @Problem  :Remove char from given position 
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To remove specified number of characters from a string</title>
+</head>
+<body>
+
+    <script>
+    //input all data from users 
+    var string = prompt("Enter the string");
+    var pos = Number(prompt("Enter the starting position"));
+
+    var numberOfCharacter = Number(prompt("Enter the character you have to remove"));
+
+   //start an coping till start position
+    var finalstr="";
+    for(var i =0 ; i<pos;i++)
+    {
+        
+        finalstr = finalstr+string[i];
+        
+        
+    }
+	   //start an coping till after start position
+    for(var j = pos+numberOfCharacter+1;j<string.length;j++)
+    {
+        finalstr+=string[j];
+    }
+//output it
+document.write(finalstr);
+
+    </script>
+    
+
+</body>
+</html>

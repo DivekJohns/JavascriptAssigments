@@ -1,0 +1,38 @@
+<!--
+* @Developer: Divek
+* @Problem  :Factors of positive integer
+* @Company  : XYZ
+* @Date     : 30-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<script>
+//function to find 
+  function factors(n)
+{
+ var factorsof = [], i;
+ 
+ for (i = 1; i <= Math.floor(Math.sqrt(n)); i += 1)
+ //if n 5 i == then push the factor to the element
+  if (n % i === 0)
+  {
+   factorsof.push(i);
+   if (n / i !== i)
+    factorsof.push(n / i);
+  }
+ 
+
+
+//function sort to sort all the elements
+ factorsof.sort(function(x, y)
+   {
+     return x - y;
+   }); 
+
+
+     alert( factorsof);
+    }
+var x=+prompt("Enter num find factor");
+factors(x);
+</script>

@@ -1,0 +1,30 @@
+<!--
+* @Developer: Divek
+* @Problem  :  To insert a string within a specific position in another string
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To insert a string within a specific position in another string</title>
+    <script>
+    var str = prompt(" Enter the string 1");
+    var str2 = prompt("Enter the string 2");
+    var position = Number(prompt("Enter the position in string 1 for string 2 insert"));
+	//adding the string between the string 1 or given pos
+    var copied = [str.slice(0,position),str2.slice(0,str2.length)+" ",str.slice(position+1,str.length-1)];
+    var copiedString = '';
+    for(x in copied)
+    {
+        copiedString+=copied[x];
+    }
+    document.write(copiedString);
+    </script>
+</head>
+</html>

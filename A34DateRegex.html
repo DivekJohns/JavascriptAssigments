@@ -1,0 +1,27 @@
+<!--
+* @Developer: Divek
+* @Problem  : program to search a date within a string
+* @Company  : XYZ
+* @Date     : 30-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<script>
+     
+var str=prompt("Enter date in dd-mm-yyyy format");
+//regex for search date
+var reg=/[0-9]{2}\/[0-1][1-9]\/[0-9]{4}/g;
+    var arr=[];
+  arr = str.split(" ");
+//search date in word
+for(x in arr){
+    
+    if(reg.test(arr[x]) ){
+        document.write("Date is "+arr[x]+"<br>");
+    }
+    document.write("given string is "+arr[x]);
+}
+
+</script>

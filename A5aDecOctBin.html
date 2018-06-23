@@ -1,0 +1,69 @@
+<!--
+* @Developer: Divek
+* @Problem  : Convert a decimal number to bin, octal and hexadecimal
+* @Company  : XYZ
+* @Date     : 20-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> To Convert a decimal number to bin, octal and hexadecimal.</title>
+</head>
+<body>
+    <script>
+    
+    var num = Number(prompt(" enter the Number"));
+    decimalTobaseary(num);
+    decimalToHexaDecimal(num);
+    decimalToOctal(num);
+    function decimalTobaseary(num)
+    {
+        var base = 2;
+        var output = "";
+        while(num>0)
+        {
+            var rem = parseInt(num%base);
+            output+=rem;
+            var finaloutput = parseInt(num/base);
+            num = finaloutput;
+
+        }
+        document.write(output+" BIN");
+    }
+    function decimalToHexaDecimal(num)
+    {
+        var base = 16;
+        var output = "";
+        while(num>0)
+        {
+            var rem = parseInt(num%base);
+            output+=rem;
+            var finaloutput = parseInt(num/base);
+            num = finaloutput;
+
+        }
+        document.write("<br> "+output+" HEXA");
+    }
+    function decimalToOctal(num)
+    {
+        var base = 8;
+        var output = "";
+        while(num>0)
+        {
+            var rem = parseInt(num%base);
+            output+=rem;
+            var finaloutput = parseInt(num/base);
+            num = finaloutput;
+
+        }
+        document.write("<br> "+output+" OCT");
+    }
+    
+    </script>
+    
+</body>
+</html>

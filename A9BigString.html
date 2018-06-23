@@ -1,0 +1,46 @@
+<!--
+* @Developer: Divek
+* @Problem  : to display the longest word from the given string
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<script>
+ var str =prompt("Enter text");
+    var arr=[];
+  arr = str.split(" ");
+
+var big="";
+   var bigl=0;
+
+   
+    for(var i=0; i<arr.length;i++){
+
+      if(arr[i].length>big.length){
+    //setting biggest element of all
+           big=arr[i];
+		   //also setting the length of big element 
+          bigl=arr[i].length;
+      }
+	  //check if length of big is equal to any other word then copy it
+      else if(arr[i].length==bigl){
+           big=big+" "+arr[i];
+      }
+    
+    }
+          //just validating if it has to many spaces to capture the bug
+
+    if(/\s{2}/.test(big)){
+
+         document.write("To many space chracter! "+big);
+    }
+    else{
+              document.write("Big Words are ! "+big);   
+    }
+   
+   
+    
+</script>

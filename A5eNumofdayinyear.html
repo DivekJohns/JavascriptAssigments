@@ -1,0 +1,35 @@
+<!--
+* @Developer: Divek
+* @Problem  : Get the number of days in a year
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Days in year</title>
+</head>
+<body>
+
+    <script>
+    
+    var year = Number(prompt("Enter the year"));
+//if leap year it has 366 days else 365 days
+
+    if(year%4==0)
+    {
+        document.write(year +" its an  year of  366  days");
+    }
+    else{
+        document.write(year +" has 365 days ");
+    }
+    
+    </script>
+    
+</body>
+</html>

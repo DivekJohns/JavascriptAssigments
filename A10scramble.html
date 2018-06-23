@@ -1,0 +1,31 @@
+<!--
+* @Developer: Divek
+* @Problem  : scramble the string
+* @Company  : XYZ
+* @Date     : 22-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scramble Word</title>
+  <script>
+    var str=prompt("Enter a String");  
+      var pattern=prompt("Enter a pattern");
+	  //new empty string
+      var newstr="";
+	  //copying all string to  new str according to the given pattern
+      for(i=0; i<str.length; i++){
+          newstr+=str[pattern[i]];
+      }
+      document.write(newstr);
+      
+    </script>  
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--
+* @Developer: Divek
+* @Problem  : Reverse a string using function recursion
+* @Company  : XYZ
+* @Date     : 25-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To print a rev recursion</title>
+    <script>
+function reverse (str) {
+//passing until string last
+    if (str === "") {
+        return "";
+    } else {
+        return reverse(str.substr(1)) + str.charAt(0);
+    }
+}
+document.write(reverse(prompt("Enter a String to revrse")));
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

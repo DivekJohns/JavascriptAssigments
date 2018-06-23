@@ -1,0 +1,32 @@
+<!--
+* @Developer: Divek
+* @Problem  : Fibonacci 
+* @Company  : XYZ
+* @Date     : 22-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci Series</title>
+    
+</head>
+<script>
+    function fibo(x){
+        if(x<1){
+            return 0
+        }
+        else if(x<=2){
+            return 1
+        }
+        else {return fibo(x-1)+fibo(x-2) ;}
+		}
+    document.write( fibo(+prompt("enter a  number to find fiboncci series !") ) );
+    </script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!--
+* @Developer: Divek
+* @Problem  : capitalize the first letter of each word in a string.
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>capitalize the first letter</title>
+</head>
+<body>
+    <script>
+    
+
+        var string  = prompt("Enter the string");
+        var ans = "";
+        var array = string.split(" ");
+        for(var i = 0 ; i < array.length;i++)
+        {
+		    //using function charAt() and charAt().toUppercase() to convert all first char as caps and store in answer
+        var ans = array[i].charAt(0).toUpperCase()+array[i].substr(1,array[i].length).toLowerCase()+" ";
+        document.write(ans);
+        
+        }
+  
+    </script>
+    
+</body>
+</html>

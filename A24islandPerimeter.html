@@ -1,0 +1,37 @@
+<!--
+* @Developer: Divek
+* @Problem  : calculate perimeter of island
+* @Company  : XYZ
+* @Date     : 23-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<script>
+	  //initialize all required variable
+      var inputarr = [ [1,0,0,0], [1,0,0,0], [1,0,0,0], [1,0,0,0] ];
+        var perimeter = 0;
+        var n = inputarr.length;
+        var m = inputarr[0].length;
+      
+//fetch all the element and check around it 
+//use developer mode for better explanation
+	  for(var i=0;i<n;i++){
+            for(var j=0;j<m;j++){
+                if(inputarr[i][j] == 1){
+			debugger;
+			//check if its around element has 0 and increment perimeter
+                    if(i==0 || inputarr[i-1][j] == 0) perimeter++;
+
+                    if(i==n-1 || inputarr[i+1][j] == 0) perimeter++;
+
+                    if(j==0 || inputarr[i][j-1] == 0) perimeter++;
+                    
+                    if(j==m-1 || inputarr[i][j+1] == 0) perimeter++;
+                }
+            }
+        }
+    alert("perimeter of island is "+perimeter);
+
+        </script>
+ 

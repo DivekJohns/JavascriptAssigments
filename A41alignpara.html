@@ -1,0 +1,55 @@
+<!--
+* @Developer: Divek
+* @Problem  : Align paragraph
+* @Company  : XYZ
+* @Date     : 30-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Align para</title>
+</head>
+<style>
+    
+    </style>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, tempore autem debitis voluptates eum necessitatibus tenetur nisi numquam soluta repellat praesentium assumenda, impedit blanditiis asperiores, beatae ratione molestiae voluptate doloremque. lorem</p>
+
+       <p>Lorem ipsum dolor sit amet,um assumenda, impedit blanditiis asperiores, beatae ratione molestiae voluptate doloremque. lorem</p>
+        
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. at praesentium assumenda, impedit blanditiis asperiores, beatae ratione molestiae voluptate doloremque. lorem</p>
+           
+           <button onclick="left()">Align left</button>
+               <button onclick="center()">Align center</button>
+                   <button onclick="right()">Align rigth</button>
+</body>
+<script>
+    //function to align left
+    function left(){
+        var p=document.getElementsByTagName("p");
+        for(x=0; x<p.length; x++){
+            p[x].style.textAlign="left";
+        }
+    }
+    //function to align center
+    function center(){
+        var p=document.getElementsByTagName("p");
+        for(x=0; x<p.length; x++){
+            p[x].style.textAlign="center";
+        }
+    }
+    //function to align right
+    function right(){
+        var p=document.getElementsByTagName("p");
+        for(x=0; x<p.length; x++){
+            p[x].style.textAlign="right";
+        }
+    }
+    
+    </script>
+</html>

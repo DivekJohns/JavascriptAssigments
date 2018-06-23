@@ -1,0 +1,34 @@
+<!--
+* @Developer: Divek
+* @Problem  : number or not
+* @Company  : XYZ
+* @Date     : 20-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Check whether the input value is numeric or not. e.g if user enters 9 then it should display
+            it as a numeric.</title>
+
+    <script>
+//using regular exp to check a number or not
+ var exp=/\d/;
+ var str=+prompt("Enter a text");
+
+         if(exp.test(str)){
+      document.write("Its an Number <br>");
+}
+else{
+  document.write("Not an number");
+}
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!--
+* @Developer: Divek
+* @Problem  : on hover img change
+* @Company  : XYZ
+* @Date     : 25-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<script>
+function changesrc(){
+
+    document.getElementsByTagName("img")[0].src="c.jpg";
+}
+    function rollback(){
+    document.getElementsByTagName("img")[0].src="cat.jpg";
+}
+
+
+</script>
+<!--using onmouse move onmouse out to invoke function -->
+
+<img src="cat.jpg" onmousemove="changesrc()" onmouseout="rollback()">

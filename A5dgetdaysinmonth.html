@@ -1,0 +1,31 @@
+<!--
+* @Developer: Divek
+* @Problem  : check days in month
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<script>
+//function to check num of  days in month
+var daysInMonth = function(month,year) {
+//returns num of days from counting to last day of prev month
+ return new Date(year, month, 0).getDate();
+
+};
+//making an array with month name
+var month = ["jan", "feb", "mar", "apr", "may", "jun", "jul","aug", "sep", "oct", "nov", "dec"],indexofmonis;
+
+var givenmonth=prompt("Enter month to get num of days");
+var givenyear=+prompt("Enter Year of Month");
+//checking th given input to array
+for(var i=0; i<month.length; i++){
+ if (givenmonth == month[i])
+     {
+         indexofmonis=i+1;
+     }
+}
+
+alert(daysInMonth(indexofmonis, givenyear));
+</script>

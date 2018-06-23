@@ -1,0 +1,58 @@
+<!--
+* @Developer: Divek
+* @Problem  : 2n integers, write a JavaScript program to find sum of min(ai, bi).
+* @Company  : XYZ
+* @Date     : 27-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 23</title>
+ <script>
+ //getting array size of the element
+    var len = Number(prompt("enter the length of an array"));
+	//making two n
+    len = len*2;
+    var array = [];
+	//input all array elements using prompt
+    for(var i = 0;i<len;i++)
+    {
+        array[i] = Number(prompt("enter the element at index "+i));
+    }
+ 
+    var sum = 0, minArray =[];
+   //min function returns min element of the array 
+    function min(val, val2)
+    {
+    
+        var ans = (val > val2)?val2:val;
+        return ans;
+    }
+    var index = 1
+	//passing two n elements of array to min function  and calculating the sum of it
+    for(var j = 0;j<array.length;j+=2)
+    {
+        
+        minArray[0] = Number(array[j]);
+        minArray[1] = Number(array[index]);
+        index++;
+
+
+
+        document.write(min(minArray[0],minArray[1])+"<br>");
+        sum = sum+min(minArray[0],minArray[1]);
+        Number(sum);
+        }
+    
+document.write("The minimum sum "+sum +"<br>");
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

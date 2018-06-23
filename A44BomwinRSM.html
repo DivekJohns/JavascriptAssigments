@@ -1,0 +1,89 @@
+
+<!--
+* @Developer: Divek
+* @Problem: 
+* @Company: XYZ
+* @Date:  5/23/2018  
+* @copyright  WSA Academy
+* @license    GPL
+* @version    1.0
+  -->
+<!--Write a JavaScript program that will create button
+a) For open a new google search window
+b) Resize the window .
+c) Scroll the window 10 pixels to the right.
+d) Move the new window relative to its current position.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    width: 5000px;
+}
+
+/*button {
+    position: fixed;
+}*/
+</style>
+</head>
+<body>
+<button onclick="openN()">create</button> 
+   <button onclick="move()">Move</button>
+<button onclick="resize()">resize</button>
+<button onclick="scrollme()">scroll </button>
+<button onclick="scrollcurrent()">scrollthiswindow </button>
+<button onclick="closech()">Close</button><br><br>
+</body>
+</html>
+
+
+
+
+
+
+<script>
+    
+ var myWindow;
+ //to open new window
+    function openN(){
+        myWindow=window.open("","new window","width=400,height=400");
+    }
+    
+    function move(){
+        myWindow.moveTo(100,300);
+        myWindow.document.write("Moved the window");
+        var x=1000
+        while(x>0){
+                    myWindow.document.write(x);
+            x--;
+        }
+      
+    } 
+    //function to resize
+    function resize(){
+myWindow.resizeTo(100,300);
+     
+    }
+    
+    //function to scroll
+function scrollme() {
+    myWindow.scrollBy(1000, 0);
+}
+    
+      //function to close  
+function closech() {
+    myWindow.close();
+}
+    //functio to scroll current document
+    function scrollcurrent() {
+    scrollBy(1000, 0);
+        alert("Window will be scroll");
+}
+       
+</script>
+
+
+
+
+

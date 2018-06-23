@@ -1,0 +1,144 @@
+<!--
+* @Developer: Divek
+* @Problem: To create dynamic html Nodes
+* @Company: XYZ
+* @Date:  5/23/2018  
+* @copyright  WSA Academy
+* @license    GPL
+* @version    1.0
+  -->
+  <style>
+      button{
+          padding 105px !important;
+      }
+      a{
+          width: 10px;
+          display: block;
+         color:  chocolate;
+          text-decoration: none;
+          transition: all .4s ease;
+          
+      }
+      a:hover{
+                 color:  black; 
+      }
+
+</style>
+  <body>
+      
+  </body>
+  <script>
+  //create button and paragraph
+         var button1 = document.createElement("button");
+         var button2 = document.createElement("button"); 
+         var button3 = document.createElement("button");
+         var btnv1 = document.createTextNode("Create paragraph ");
+         var btnv2 = document.createTextNode("Create paragraph with strong");
+         var btnv3 = document.createTextNode("Create Nav ");
+         var btn1attr=document.createAttribute("onclick");
+         btn1attr.value="createpara();";
+         button1.setAttributeNode(btn1attr);
+            
+      var btn2attr=document.createAttribute("onclick");
+         btn2attr.value="createparas();";
+         button2.setAttributeNode(btn2attr);
+             
+      var btn3attr=document.createAttribute("onclick");
+         btn3attr.value="createNav();";
+         button3.setAttributeNode(btn3attr);
+      
+       document.body.appendChild(button1);  
+      document.body.appendChild(button2); 
+      document.body.appendChild(button3);
+          
+     button1.appendChild(btnv1);  
+      button2.appendChild(btnv2); 
+     button3.appendChild(btnv3);
+//create a paragraph
+     
+function createpara(){
+     var p = document.createElement("p");
+          document.body.appendChild(p);
+            
+       var text = document.createTextNode("This is an paragraph with normal p Tag ");
+        p.appendChild(text);  
+    
+}
+//create para with strong tag
+function createparas(){
+     var p = document.createElement("p");
+          document.body.appendChild(p);
+           var strong = document.createElement("strong");
+            p.appendChild(strong);
+            
+       var text = document.createTextNode("This is an paragraph with normal Strong Tag ");
+        strong.appendChild(text);  
+    
+}
+
+      
+      //create in nav list
+function createNav(){
+       var nav = document.createElement("nav");
+       var achor = document.createElement("a");
+       var li = document.createElement("li");
+        var ul = document.createElement("ul");
+             nav.appendChild(ul); 
+     ul.appendChild(li); 
+                  document.body.appendChild(nav);
+                li.appendChild(achor); 
+         var linkone = document.createTextNode("www.google.com");
+             achor.appendChild(linkone);
+       var href=document.createAttribute("href");
+      href.value="http://www.google.com";
+      achor.setAttributeNode(href);
+
+    
+ 
+              var li2 = document.createElement("li");
+      ul.appendChild(li2); 
+        var achor2 = document.createElement("a");   
+             li2.appendChild(achor2);
+         var linktwo = document.createTextNode("www.facebook.com");
+            achor2.appendChild(linktwo); 
+       var href2=document.createAttribute("href");
+      href2.value="http://www.facebook.com";
+      achor2.setAttributeNode(href2);
+}
+      
+      
+      
+      
+        /*   var t = document.createTextNode("Change font Attr ");
+                          button1.appendChild(t);  
+    var text = document.createTextNode("Change Border ");
+                          button2.appendChild(text);
+    
+    var fontatt=document.createAttribute("onclick");
+      fontatt.value="changefont();";
+     button1.setAttributeNode(fontatt);
+    
+    
+        var borderatt=document.createAttribute("onclick");
+      borderatt.value="changeb();";
+      button2.setAttributeNode(borderatt);
+    
+        var para = document.createTextNode("This is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraphThis is a sample paragraph ");
+                        p.appendChild(para);
+    
+             var para= document.getElementsByTagName("p")[0];
+    function changefont(){
+
+         para.style.color="Cyan";
+            para.style.fontSize="25px";
+            para.style.fontWeight="5px";
+        para.style.background="grey";
+        para.style.background="Helvetica";
+        
+    }
+    function changeb(){
+                para.style.border="10px solid transparent";
+                para.style.borderImage="url(border.png) 10 round";
+    }
+    */
+      </script>

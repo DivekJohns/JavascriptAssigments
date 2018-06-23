@@ -1,0 +1,46 @@
+<!--
+* @Developer: Divek
+* @Problem  : calculate student marks
+* @Company  : XYZ
+* @Date     : 22-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<html>
+<script>
+    var a;
+    a=prompt("Enter a 3 Subject Marks "); 
+var arr=[];
+  arr = a.split(" ");
+    var grade;
+    //calculate percentage
+       var percentage=( parseInt(arr[0]) + parseInt(arr[1]) + parseInt(arr[2]))/3;
+	   //set the grade according to the value
+if(percentage>=90){
+   grade="EX grade";
+   }
+else if(percentage>=80){
+grade="A+ grade";
+}
+    else if(percentage>=70){
+grade="A grade";
+}
+     else if(percentage>=60){
+     grade="B+ grade";
+          }
+             
+			else if(percentage<60){
+				grade="Sorry You have failed";
+						}
+//check if input is valid or not
+  if(grade!=undefined){
+     alert("Result is :"+grade) 
+     }  
+else{
+    alert("invalid Inputs");
+}
+    
+</script>
+<html>

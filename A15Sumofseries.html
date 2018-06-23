@@ -1,0 +1,40 @@
+<!--
+* @Developer: Divek
+* @Problem  : Sum of series
+* @Company  : XYZ
+* @Date     : 22-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignemnt 16</title>
+</head>
+<body>
+
+    <script>
+
+        var num = Number(prompt("Enter the number of terms want to genrate "));
+
+        var array = [];
+        var sum = 0;
+        for(var i = 1 ; i<=num;i++)
+        {
+            array[i] = 1/i;
+            sum+=array[i]; 
+        }
+        var sum2 = 0;
+        for(var j = 2 ; j<=(num*2);j+=2)
+        {   
+            sum2 = sum2+j;
+        }
+
+        document.write(sum+" "+sum2);
+
+    </script>
+    
+</body>
+</html>

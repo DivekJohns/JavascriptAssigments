@@ -1,0 +1,28 @@
+<!--
+* @Developer: Divek
+* @Problem  : perimeter of rectangle
+* @Company  : XYZ
+* @Date     : 25-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+  <html>
+    <head>
+    <title>Area of Rectangle</title>
+    </head>
+    <body>
+    <script>
+        //declaring object of all the perimeter and function to return perimeter
+        var rect={
+            length : parseInt(prompt("Enter length of Rectangle : ")),
+             width : parseInt(prompt("Enter width of Rectangle : ")),
+            area:function(){ return this.length * this.width},
+            perimeter:function(){return(this.length * 2)+ (this.width*2) }
+        }  
+		
+        document.write("Area is "+rect.area()+"<br>"+"perimeter is "+rect.perimeter());
+    	</script>
+    </body>
+    </html>
+		

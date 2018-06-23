@@ -1,0 +1,32 @@
+<!--
+* @Developer: Divek
+* @Problem  : To reverse a given string
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To reverse a given string.</title>
+</head>
+<body>
+<script>
+    var str = prompt("Enter the string to reverse");
+	var arr = [];
+    arr= str.split("");
+    var finalstr = "";
+	//running for loop in reverse to copy from last 
+    for(var x = (arr.length-1);x>=0;x--)
+    {
+            finalstr+=arr[x];
+    }
+	document.write(finalstr);
+    
+    </script>
+    
+</body>
+</html>

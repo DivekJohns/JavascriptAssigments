@@ -1,0 +1,33 @@
+<!--
+* @Developer: Divek
+* @Problem  : FizzBuzz
+* @Company  : XYZ
+* @Date     : 19-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz Buzz</title>
+    <script>
+var arr=new Array(100);
+    for (i=0; i<=99; i++ ){
+        
+         arr[i]=i+1;
+    }
+    
+        
+ for(x in arr){
+     //using ternary to calculate if divisible by 5 &3 print fizz buzz else divisible by 3 print fizz else print buzz
+    (arr[x]%3==0 && arr[x]%5==0)?document.write("FizzBuzz"):(arr[x]%3==0)?document.write("Fizz"):(arr[x]%5==0)?document.write("Buzz"):document.write(arr[x]);
+     document.write("<br>");
+ }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!--
+* @Developer: Divek
+* @Problem  :Nim Game
+* @Company  : XYZ
+* @Date     : 17-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nime Game</title>
+  
+    <style>
+        body{
+            background-color: salmon;
+            
+                
+        }
+        input{
+            padding: 10px;
+    width: 200px;
+            margin-left: 5%;
+            margin-top: 8%;
+            
+        }
+        
+        button{
+                padding: 10px;
+             width: 100px;
+            margin-left: 5%;
+            margin-top: 8%;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+   <div style="position: absolute; background: ; width:280px; top:20%; right: 39%; height: 120px;  ">
+        <h3 style="color: white;  ;width: 95%; padding: 8%; " id="paragraph" placeholder="Username">Player One start the Game !</h3>
+   </div>
+    <br><br></br>
+     <div style="position: absolute; background: grey; width:250px; top:40%; right: 40%; height: 200px;  ">
+       <input id="Stone" type="number"   placeholder="Enter Number of Stones to play">
+      <input id="input" type="number"   placeholder="Number of stones to Remove" >
+	  
+      <button onclick="location.reload();">Reset</button>
+     <button id="start"onclick="callMe();">Start</button>
+
+   </div>
+    
+</body>
+  <script>
+             //starting from player one
+              var turn=1;
+
+      //setting stone value and making the input box read only
+        function callMe(){
+						  var Stones = document.getElementById("Stone").value;
+			
+							document.getElementById("Stone").readOnly=true;
+     //only if stone is > enter or else disp an error   
+     if(Stones>1)
+         {
+         
+             if(turn)
+                 {
+                    //input from player one how many stones to remove REmstone and change the button value to ok
+                    var RemStone = document.getElementById("input").value;
+                      document.getElementById("start").innerHTML="OK";
+                   
+				   //check if remove stone is <3 and >0
+                   if(RemStone>3 || RemStone<=0)
+                         {
+                             
+                              document.getElementById("paragraph").innerHTML="Player One Invaid input Only 1,2 or 3 allowed";
+                                //setting turn again to player one to play  
+								  turn=1;
+                         }
+                      //check if remove stone is equal to current removing stone and set one player to win
+                     else if(Stones==RemStone )
+                         {
+
+                               document.getElementById("paragraph").innerHTML="Game Over ! Player One Wins the game";
+                             Stones=0;
+                      
+                         }
+                     else{
+                           //check if remove stone is <3 remove stone greater than current stone 
+							 if(Stones<3 && RemStone>Stones){
+							                               document.getElementById("paragraph").innerHTML="Hmm sorry Insufficent stones try again"
+                           
+						   }
+						   else{
+						   //deduct the stone 
+						   Stones-=RemStone;
+						   //and check if stone <4 ==1 set opp player to win 
+						   if(Stones==1 || Stones<=4){
+						   document.getElementById("paragraph").innerHTML="Game Over ! Player Two Wins the game";
+						                                        Stones=0;
+						   
+						   }
+						   else{
+						   		   //set player two turn  
+						   document.getElementById("paragraph").innerHTML="Player Two Enter Number of Stones To Remove from 1 to 3 Stone="+Stones;
+						    document.getElementById("Stone").value=Stones;
+                            turn=0;
+							}
+						   }
+						   
+                     }
+                     
+                  
+                     
+                 }
+             else{
+                 
+                //all player one comments follow to player two comments !!     
+                  var RemStone = document.getElementById("input").value; 
+                     if(RemStone>3 || RemStone<=0  )
+                    
+                         {
+                             
+            
+                             document.getElementById("paragraph").innerHTML=" Player Two Invaid input Only 1,2 or 3 or allowed";
+                               turn=0;
+                         }
+                     else if(Stones==RemStone)
+                         {
+                              document.getElementById("paragraph").innerHTML="Game Over ! Player Two wins";
+       
+                                     Stones=0;
+                            
+                             
+                         }
+                     else{
+					  if(Stones<3 && RemStone>Stones){
+							                               document.getElementById("paragraph").innerHTML="Hmm Sorry Insufficent stones Try Agian";
+                                    turn=0;
+                           
+						   }
+                         else{
+                          Stones-=RemStone;
+						   if(Stones==1 ){
+						   document.getElementById("paragraph").innerHTML="Game Over ! Player One Wins the game";
+						                                        Stones=0;
+						   }
+						   else{
+                            turn=1;
+                            document.getElementById("Stone").value=Stones;
+                          document.getElementById("paragraph").innerHTML="Player One Enter Number of Stones To Romove from 1 to 3 Stone="+Stones;
+						  }
+						  }
+                     }
+                   
+                 
+             }
+             
+             
+         }
+        else{
+		document.getElementById("Stone").readOnly=false
+             document.getElementById("paragraph").innerHTML="Stones cannot be less than 1 or an Equation;";
+			 
+            
+        }
+        }
+        
+    </script>
+</html>

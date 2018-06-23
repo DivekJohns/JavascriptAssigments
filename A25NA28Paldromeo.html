@@ -1,0 +1,25 @@
+<!--
+* @Developer: Divek
+* @Problem  : check whether it is palindrome or not
+* @Company  : XYZ
+* @Date     : 25-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<script>
+var input=prompt("Enter a String");
+//adding function to reverse and return
+  
+    function rev(ste){
+            var revstr=""
+        for(i=ste.length-1; i>=0; i--) {
+            revstr+=ste[i];
+        }
+        return revstr;
+    }
+    
+document.write(  ( (rev(input.toLowerCase())==input.toLowerCase())?" It's Palandrome":"Hmm Not Palandrome :( ")+"<br> Reverse of string is &quot "+ rev(  input.toLowerCase()  )+"&quot");
+
+
+</script>

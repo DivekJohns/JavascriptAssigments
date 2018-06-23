@@ -1,0 +1,18 @@
+<!--
+* @Developer: Divek
+* @Problem  : count total positive and negative number
+* @Company  : XYZ
+* @Date     : 26-5-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+
+<script>
+    var arrayco=[-10,10,1,-2,5,-9,-12,5,8];
+    var Ncount=0,Pcount=0;
+	//incrementing -count and + count if element of it is found
+    for(x in arrayco)(arrayco[x]<0)?Ncount++:Pcount++;   
+    document.write("postive count is "+Pcount+"<br> negative count is"+Ncount);
+
+</script>

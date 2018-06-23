@@ -1,0 +1,19 @@
+<!--
+* @Developer: Divek
+* @Problem  : First letter to uppercase
+* @Company  : XYZ
+* @Date     : 25-6-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+  -->
+<script>
+    var text=prompt("Enter a Sentence");
+        var arr=[];
+  arr = text.split(" ");
+    for (x in arr){
+        //printing converted sting using string inbuilt function 
+      document.write(arr[x].replace(arr[x].charAt(0),arr[x].charAt(0).toUpperCase()     ) +"&nbsp"    );   
+    }
+ 
+</script>
